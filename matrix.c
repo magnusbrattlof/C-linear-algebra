@@ -1,25 +1,27 @@
 #include <stdio.h>
 #include "matrix.h"
 
-float vdot(float A[3][3], float B[3][3]) {
+int dot(int A[1][3], int B[1][3]) {
 
-    printf("%.2f", A[0][0]);
+    int c = 0;
 
-    //
-    // for (int i = 0; i <= 2; i++) {
-    //     for (int j = 0; j <= 2; j++) {
-    //         C[i][j] = A[i][j] + B[i][j];
-    //     }
-    // }
-    //
-    // for (int i = 0; i <= 2; i++) {
-    //     printf("\n");
-    //     for (int j = 0; j <= 2; j++) {
-    //         printf("%d ", C[i][j]);
-    //     }
-    // }
-
-
-    return 0;
-
+    for (int j = 0; j <= 2; j++) {
+        c += A[0][j] * B[0][j];
+    }
+    return c;
 }
+
+// Determine the cross product of two vectors with the help of Sarrus rule
+int cross(int A[1][3], int B[1][3]) {
+    return 0;
+}
+
+//
+// 11 22
+// 11 22
+//
+// 00 22
+// 00 22
+//
+// 00 11
+// 00 11
