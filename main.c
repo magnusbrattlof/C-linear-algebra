@@ -1,36 +1,33 @@
 #include <stdio.h>
 #include <math.h>
 
+float vdot(float A[3][3], float B[3][3]);
 
 int main() {
 
-    int A[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
-    };
-    int B[3][3] = {
-        {1, 2, 3},
-        {4, 5, 6},
-        {7, 8, 9}
+    float A[1][3] = {
+        {2, 4, 9}
     };
 
-    int C[3][3];
+    float B[1][3] = {
+        {1, 2, 3}
+    };
 
-    for (int i = 0; i <= 2; i++) {
-        for (int j = 0; j <= 2; j++) {
-            C[i][j] = A[i][j] + B[i][j];
-        }
-    }
 
-    for (int i = 0; i <= 2; i++) {
-        printf("\n");
-        for (int j = 0; j <= 2; j++) {
-            printf("%d ", C[i][j]);
-        }
-    }
-
+    printf("%.2f\n", vdot(A, B));
 
     return 0;
 
+}
+
+
+float vdot(float A[1][3], float B[1][3]) {
+
+    float c;
+
+    for (int j = 0; j <= 2; j++) {
+        c += A[0][j] * B[0][j];
+    }
+
+    return c;
 }
