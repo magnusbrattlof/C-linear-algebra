@@ -8,3 +8,7 @@ int dot(int A[], int B[]);
 
 // Returning a new vector from the cross product (a x b)
 int * cross(int A[], int B[]);
+
+float* mycomplex(float a, float b, int form);
+
+// float det(float A[3][3]);
