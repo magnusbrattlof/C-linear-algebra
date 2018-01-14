@@ -1,14 +1,17 @@
+typedef struct _matrix {
+    int i, j;
+    float d[3][3];
+} matrix;
 
-typedef struct _vector {
-    int i, j, k;
-} vector;
 
 // Returning a inting point number of two vectors in space
-int dot(int A[], int B[]);
+float dot(matrix A, matrix B);
 
 // Returning a new vector from the cross product (a x b)
-int * cross(int A[], int B[]);
+float* cross(matrix A, matrix B);
 
-float* mycomplex(float a, float b, int form);
+float* mycomplex(float a, float b, int format);
 
-// float det(float A[3][3]);
+float det(matrix A);
+
+float* cofactor(matrix A);
