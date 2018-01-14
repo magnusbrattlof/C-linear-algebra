@@ -2,24 +2,14 @@
 #include <stdlib.h>
 #include "matrix.h"
 
-
+int det(matrix A);
 
 int main() {
 
-    int A[] = {1, 1, 1};
-    int B[] = {1, 1, 1};
+    matrix A = {2, 2, {{5, 2}, {4, 2}}};
+    matrix B = {3, 3, {{-1, 2, -1}, {1, 0, 1}, {3, 0, -2}}};
 
-    int *p = cross(A, B);
-
-    for (int i = 0; i <= 2; i++) {
-        printf("%d\n", p[i]);
-    }
-
+    printf("%d\n", det(A));
+    printf("%d\n", det(B));
+    return 0;
 }
-
-
-
-    // int A[3][1] = {{1}, {1}, {1}};
-    // int B[3][1] = {{1}, {1}, {1}};
-    //
-    // printf("%d\n", dot(A, B));
