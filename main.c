@@ -2,14 +2,16 @@
 #include <stdlib.h>
 #include "matrix.h"
 
-int det(matrix A);
-
 int main() {
 
-    matrix A = {2, 2, {{5, 2}, {4, 2}}};
-    matrix B = {3, 3, {{-1, 2, -1}, {1, 0, 1}, {3, 0, -2}}};
 
-    printf("%d\n", det(A));
-    printf("%d\n", det(B));
+    matrix X = {3, 1, {{1}, {2}, {3}}};
+    matrix Y = {3, 1, {{4}, {5}, {6}}};
+
+    float* Z = cross(X, Y);
+
+    printf("%.2fi %.2fj %.2fk\n", Z[0], Z[1], Z[2]);
+
+
     return 0;
 }
